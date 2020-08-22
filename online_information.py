@@ -25,3 +25,5 @@ class Internet_Info(object):
 
 if __name__ == "__main__":
     print(Internet_Info())
+    print("")
+    input("Enter:")
