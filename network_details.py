@@ -1,5 +1,5 @@
 import psutil
-form tabulate import tabulate
+from tabulate import tabulate
 
 class Network_Details(object):
     def __init__(self):
@@ -10,10 +10,10 @@ class Network_Details(object):
         self.address_ip = []
         self.netmask_ip = []
         self.broadcast_ip = []
-        for interfacename, interface_addresses in self-parser.items():
+        for interfacename, interface_addresses in self.parser.items():
             self.interfaces.append(interfacename)
             for address in interface_addresses:
-                if str(address.family) == 'AddressFamily.AF_INET'
+                if str(address.family) == 'AddressFamily.AF_INET':
                     self.address_ip.append(address.address)
                     self.netmask_ip.append(address.netmask)
                     self.broadcast_ip.append(address.broadcast)
