@@ -7,3 +7,4 @@ def shorten(url):
 if __name__ == "__main__":
     url = input("Enter link: ")
     print(f"\n{shorten(url)}")
+    input()

@@ -18,3 +18,4 @@ def cpu_info():
 
 if __name__ == "__main__":
     cpu_info()
+    input()
