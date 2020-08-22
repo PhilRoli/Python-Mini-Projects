@@ -19,4 +19,5 @@ class Network(object):
 
 if __name__ == "__main__":
     print(Network())
-    input()
+    print("")
+    input("Enter:")

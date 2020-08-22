@@ -26,4 +26,5 @@ class Network_Details(object):
 
 if __name__ == "__main__":
     print(Network_Details())
-    input()
+    print("")
+    input("Enter:")
