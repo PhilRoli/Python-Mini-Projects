@@ -38,13 +38,13 @@ class Network(object):
         down = str(f"{round(self.parser.download() / 1_000_000, 2)} Mbps")
         printProgressBar(1, 2, prefix = 'Speedtest:', suffix = 'Download Complete', length = 50)
         up = str(f"{round(self.parser.upload() / 1_000_000, 2)} Mbps")
-        printProgressBar(2, 2, prefix = 'Speedtest:', suffix = 'Upload Complete', length = 50)
+        printProgressBar(2, 2, prefix = 'Speedtest:', suffix = 'Upload Complete ', length = 50)
         return [["IP-Addresse", "Download", "Upload"], [ip_finder(), down, up]]
     
     def __repr__(self):
         speed = self.data()
         # os.system('cls')
-        return tabulate(speed, headers="firstrow", tablefmt="fancy_grid")
+        return tabulate(speed, headers="firstrow", tablefmt="simple")
 
 class Internet_Info(object):
     def __init__(self):
