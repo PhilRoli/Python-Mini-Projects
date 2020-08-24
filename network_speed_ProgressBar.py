@@ -1,6 +1,7 @@
 import os
 import socket
 import speedtest
+import tabulate
 from tabulate import tabulate
 
 # Print iterations progress
