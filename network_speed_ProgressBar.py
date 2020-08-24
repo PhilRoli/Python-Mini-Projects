@@ -50,7 +50,6 @@ class Network(object):
     
     def __repr__(self):
         speed = self.data()
-        # os.system('cls')
         return tabulate(speed, headers="firstrow", tablefmt="simple")
 
 class Internet_Info(object):
