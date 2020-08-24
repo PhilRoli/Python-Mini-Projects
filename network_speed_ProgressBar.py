@@ -2,6 +2,8 @@ import os
 import socket
 import speedtest
 import subprocess
+import sys
+import time
 import tabulate
 from tabulate import tabulate
 
@@ -37,11 +39,14 @@ class Network(object):
         self.parser = speedtest.Speedtest()
 
     def data(self):
+        Tstart = time.time()
         down = str(f"{round(self.parser.download() / 1_000_000, 2)} Mbps")
         printProgressBar(1, 2, prefix = 'Speedtest:', suffix = 'Download Complete', length = 50)
         up = str(f"{round(self.parser.upload() / 1_000_000, 2)} Mbps")
         printProgressBar(2, 2, prefix = 'Speedtest:', suffix = 'Upload Complete ', length = 50)
-        return [["IP-Addresse", "Download", "Upload"], [ip_finder(), down, up]]
+        Tend = time.time()
+        Tfinal = Tend - Tstart
+        return [["Time", "Download", "Upload"], [str(round(Tfinal, 2)) + " Ms", down, up]]
     
     def __repr__(self):
         speed = self.data()
@@ -58,6 +63,13 @@ class Internet_Info(object):
         Host-Name: \t{self.host}
         IP-Address: \t{self.ip}
         """)
+
+def delete_last_lines(n=1):
+    CURSOR_UP_ONE = '\x1b[1A' 
+    ERASE_LINE = '\x1b[2K' 
+    for _ in range(n): 
+        sys.stdout.write(CURSOR_UP_ONE) 
+        sys.stdout.write(ERASE_LINE) 
 
 def check_connection():
     output = subprocess.check_output(["nslookup", "google.com"])
