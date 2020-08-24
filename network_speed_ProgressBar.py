@@ -1,6 +1,7 @@
 import os
 import socket
 import speedtest
+import subprocess
 import tabulate
 from tabulate import tabulate
 
@@ -58,9 +59,27 @@ class Internet_Info(object):
         IP-Address: \t{self.ip}
         """)
 
+def check_connection():
+    output = subprocess.check_output(["nslookup", "google.com"])
+
+    outputdec = output.decode("utf-8")
+
+    if("DNS" in outputdec):
+        return False
+    else:
+        return True
+
 if __name__ == "__main__":
-    print(Internet_Info())
-    printProgressBar(0, 2, prefix = 'Speedtest:', suffix = 'Complete', length = 50)
-    print(Network())
-    print("")
-    input("Press ENTER to close")
+    connection = check_connection()
+    if connection == False:
+        os.system('cls')
+        print("No Internet Connection Available")
+        print("")
+        input("Press ENTER to close")
+    else:
+        os.system('cls')
+        print(Internet_Info())
+        printProgressBar(0, 2, prefix = 'Speedtest:', suffix = 'Complete', length = 50)
+        print(Network())
+        print("")
+        input("Press ENTER to close")
