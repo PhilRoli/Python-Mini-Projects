@@ -46,7 +46,7 @@ class Network(object):
         printProgressBar(2, 2, prefix = 'Speedtest:', suffix = 'Upload Complete ', length = 50)
         Tend = time.time()
         Tfinal = Tend - Tstart
-        return [["Time", "Download", "Upload"], [str(round(Tfinal, 2)) + " Ms", down, up]]
+        return [["Time", "Download", "Upload"], [str(round(Tfinal, 2)) + " s", down, up]]
     
     def __repr__(self):
         speed = self.data()
