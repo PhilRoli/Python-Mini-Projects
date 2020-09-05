@@ -16,7 +16,7 @@ Also please ignore my mixture of English and German in certain files.
 
 - **[cpu_information.py](/cpu_information.py)**: Displays information about your CPU (Cores, Usage, Frequenzy) (Works in VSC, but not when started seperatly, checked PATH).
 
-- **[get_google.py](/get_google.py)**: Checks if Google.com is availibe, then gives back result if internet is availible or not. Used in my [Network Speed Programm](/network_speed_ProgressBar.py).
+- **[get_google.py](/get_google.py)**: Checks if Google.com is availibe, then gives back result if internet is availible or not.
 
 - **[getssid.py](/getssid.py)**: SSID part failed, now returns the IP Address
 
