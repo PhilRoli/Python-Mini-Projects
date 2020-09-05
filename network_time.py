@@ -2,6 +2,8 @@ import speedtest
 from tabulate import tabulate
 import time
 
+# Not Working.Only 1 run despite higher Input
+
 class Network(object):
     def __init__(self):
         self.parser = speedtest.Speedtest()
