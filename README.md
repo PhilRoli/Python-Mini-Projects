@@ -32,6 +32,8 @@ Also please ignore my mixture of English and German in certain files.
 
 - **[online_information.py](/online_information.py)**: [network_speed_ProgressBar](/network_speed_ProgressBar.py) without the Progress bar and internet check.
 
+- **[outside_ip.py](/outside_ip)**: Uses a ``get('').text`` request to ``https://api.ipify.org`` to get the oustide ip of the local machine and outputs it to the terminal.
+
 - **[url_shortener.py](/url_shortener.py)**: Shortens any given url with the pyshorteners module.
 
 <!-- ---
