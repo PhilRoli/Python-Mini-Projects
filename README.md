@@ -30,6 +30,8 @@ Also please ignore my mixture of English and German in certain files.
 
 - **[network_time.py](/network_time.py)**: Made as a test file to run the network speed file multiple times, to test the time the test takes. But not working as intend.
 
+- **[notification_test.py](/notification_test.py)**: File to test the win10toast moudule
+
 - **[online_information.py](/online_information.py)**: [network_speed_ProgressBar](/network_speed_ProgressBar.py) without the Progress bar and internet check.
 
 - **[outside_ip.py](/outside_ip.py)**: Uses a ``get('').text`` request to ``https://api.ipify.org`` to get the oustide ip of the local machine and outputs it to the terminal.
