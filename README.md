@@ -14,6 +14,8 @@ Also please ignore my mixture of English and German in certain files.
 
 ---
 
+- **[ascii_text.py](/ascii_text.py)**: Outputs any given text as ascii with the help of the pyfiglet module
+
 - **[cpu_information.py](/cpu_information.py)**: Displays information about your CPU (Cores, Usage, Frequenzy) (Works in VSC, but not when started seperatly, checked PATH).
 
 - **[get_google.py](/get_google.py)**: Checks if Google.com is availibe, then gives back result if internet is availible or not.
